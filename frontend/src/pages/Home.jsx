@@ -1,10 +1,11 @@
 import React from 'react'
-import HeroSlider from '../components/HeroSlider'
+
+import HeroSection from '../components/HeroSection'
 
 const Home = () => {
   return (
     <div>
-        <HeroSlider />
+        <HeroSection />
     </div>
   )
 }
