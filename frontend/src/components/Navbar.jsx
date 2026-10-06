@@ -152,7 +152,7 @@ const MainNav = ({ scrolled }) => {
             className="flex items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:hidden"
           >
             <img
-              src={scrolled ? whiteLogo : logo}
+              src={logo}
               alt="Brain Software House"
               className="h-20 w-auto object-contain"
             />
@@ -417,8 +417,8 @@ const Navbar = () => {
     <nav
       className={`w-full z-50 transition-all duration-500 ${
         scrolled
-          ? 'fixed top-0 left-0 bg-[#0F1E4A] shadow-lg'
-          : 'absolute top-0 left-0'
+          ? 'fixed top-0 left-0 bg-white lg:bg-[#0F1E4A] shadow-lg'
+          : 'absolute top-0 left-0 bg-white lg:bg-transparent'
       }`}
     >
       <div
