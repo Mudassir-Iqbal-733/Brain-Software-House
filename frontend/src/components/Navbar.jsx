@@ -36,10 +36,10 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: <FaFacebookF />, href: 'https://facebook.com/', label: 'Facebook' },
-  { icon: <FaInstagram />, href: 'https://instagram.com/', label: 'Instagram' },
-  { icon: <FaLinkedinIn />, href: 'https://linkedin.com/', label: 'LinkedIn' },
-  { icon: <FaWhatsapp />, href: 'https://wa.me/923004506850', label: 'WhatsApp' },
+  { icon: <FaFacebookF />, href: 'https://www.facebook.com/brainsoftwarehouse/', label: 'Facebook' },
+  { icon: <FaInstagram />, href: 'https://instagram.com/brainsoftwarehouse', label: 'Instagram' },
+  { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/brain-software-house-8771722b0/', label: 'LinkedIn' },
+  { icon: <FaWhatsapp />, href: 'https://wa.me/923001566440', label: 'WhatsApp' },
 ];
 
 const ContactStrip = () => (
@@ -86,7 +86,7 @@ const InfoStrip = () => (
               Mail Us Today
             </p>
             <p className="text-base font-semibold text-[#0F1E4A]">
-              info@brainsoftwarehouse.com
+              brainsoftwarehouse@gmail.com
             </p>
           </div>
         </div>
@@ -258,7 +258,7 @@ const MainNav = ({ scrolled }) => {
                   className="flex items-center gap-2 bg-[#38BDF8] text-[#0F1E4A] px-6 h-16 rounded-r-md font-bold text-[13px] tracking-wider hover:bg-white transition-colors"
                 >
                   <FaPhoneAlt className="text-sm" />
-                  0300-4506850
+                  03001566440
                 </Link>
               </li>
             )}
