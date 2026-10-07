@@ -3,6 +3,13 @@ import { FaArrowRight } from 'react-icons/fa';
 import heroImg from '../assets/Hero-Img.png';
 
 const HeroSection = () => {
+  const stats = [
+    { value: '600+', label: 'Clients Across Countries' },
+    { value: '100+', label: 'Experienced Talent' },
+    { value: '50+', label: 'Projects Delivered' },
+    { value: '10+', label: 'Years Experience' },
+  ];
+
   return (
     <section className="relative w-full bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-72 pb-12 lg:pb-20">
@@ -35,7 +42,7 @@ const HeroSection = () => {
               From websites and custom software to SEO, social media and digital marketing, we provide complete digital solutions to help your business grow.
             </p>
 
-            <div data-aos="fade-up" data-aos-delay="300">
+            <div data-aos="fade-up" data-aos-delay="300" className="mb-10">
               <Link
                 to="/contact-us"
                 className="inline-flex items-center justify-center gap-2 bg-[#0F1E4A] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-bold text-sm sm:text-base shadow-lg hover:bg-[#2563EB] transition-colors duration-300"
@@ -43,6 +50,23 @@ const HeroSection = () => {
                 Get a Quote
                 <FaArrowRight className="text-xs" />
               </Link>
+            </div>
+
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 border-t border-gray-200 pt-6 max-w-2xl mx-auto lg:mx-0"
+            >
+              {stats.map((stat, i) => (
+                <div key={i} className="text-center lg:text-left">
+                  <p className="text-2xl sm:text-3xl font-bold text-[#0F1E4A]">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] sm:text-xs text-gray-500 font-medium mt-1 leading-tight">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
