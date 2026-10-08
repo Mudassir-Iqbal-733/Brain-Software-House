@@ -75,21 +75,28 @@ const HappyClients = () => {
   return (
     <section className="w-full bg-gray-50 py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <header data-aos="fade-up" className="mx-auto mb-12 max-w-3xl text-center lg:mb-14">
-          <div className="mb-5 inline-flex items-center justify-center gap-3">
-            <span className="h-2px w-12 bg-[#2563EB]" />
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2563EB] sm:text-sm">
-              Testimonials
-            </p>
-            <span className="h-2px w-12 bg-[#2563EB]" />
+        <header
+          data-aos="fade-up"
+          className="mb-12 flex flex-col gap-6 lg:mb-14 lg:flex-row lg:items-end lg:justify-between"
+        >
+          <div className="max-w-2xl">
+            <div className="mb-5 inline-flex items-center gap-3">
+              <span className="h-0.5 w-12 bg-[#2563EB]" />
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2563EB] sm:text-sm">
+                Testimonials
+              </p>
+            </div>
+            <h2 className="text-4xl font-bold leading-[1.1] tracking-tight text-[#0F1E4A] sm:text-5xl md:text-6xl">
+              Our Happy <span className="text-[#2563EB]">Clients</span>
+            </h2>
           </div>
-          <h2 className="mb-5 text-4xl font-bold leading-[1.1] tracking-tight text-[#0F1E4A] sm:text-5xl md:text-6xl">
-            Our Happy <span className="text-[#2563EB]">Clients</span>
-          </h2>
-          <p className="text-sm leading-relaxed text-gray-500 sm:text-base">
-            Real feedback from CEOs and business leaders who trusted us to build, scale, and grow
-            their digital presence.
-          </p>
+
+          <div className="max-w-md lg:pb-2">
+            <p className="text-sm leading-relaxed text-gray-500 sm:text-base">
+              Real feedback from CEOs and business leaders who trusted us to build, scale, and grow
+              their digital presence.
+            </p>
+          </div>
         </header>
 
         <div data-aos="fade-up" data-aos-delay="100" className="overflow-hidden">

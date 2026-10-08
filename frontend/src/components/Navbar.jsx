@@ -14,7 +14,7 @@ import {
 } from 'react-icons/fa';
 
 import logo from '../assets/BSH-Logo.png';
-import whiteLogo from '../assets/White-Logo.png';
+import whiteLogo from '../assets/BSH-White-Logo.png';
 
 const navLinks = [
   { name: 'HOME', href: '/' },
@@ -95,7 +95,7 @@ const InfoStrip = () => (
           <img
             src={logo}
             alt="Brain Software House"
-            className="h-32 w-auto mx-auto object-contain"
+            className="h-24 w-auto mx-auto object-contain"
           />
         </div>
 
@@ -143,9 +143,9 @@ const MainNav = ({ scrolled }) => {
     <div className="w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`flex items-center justify-between h-20 lg:h-16 transition-all duration-500 lg:relative ${
-            !scrolled ? 'lg:justify-center' : ''
-          }`}
+          className={`flex items-center justify-between transition-all duration-500 lg:relative ${
+            scrolled ? 'h-16 lg:h-16' : 'h-20 lg:h-16'
+          } ${!scrolled ? 'lg:justify-center' : ''}`}
         >
           <Link
             to="/"
@@ -163,7 +163,7 @@ const MainNav = ({ scrolled }) => {
               <img
                 src={whiteLogo}
                 alt="Brain Software House"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain transition-all duration-500"
               />
             </Link>
           )}
