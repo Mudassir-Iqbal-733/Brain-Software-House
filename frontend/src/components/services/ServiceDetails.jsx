@@ -17,8 +17,8 @@ import {
   FaQuoteLeft,
 } from 'react-icons/fa';
 import servicesData from '../../data/services.json';
-import PageHeader from '../../components/PageHeader';
-import SEO from '../../components/SEO';
+import PageHeader from '../PageHeader';
+import SEO from '../SEO';
 import ServiceCTA from './ServiceCTA';
 
 const iconMap = {

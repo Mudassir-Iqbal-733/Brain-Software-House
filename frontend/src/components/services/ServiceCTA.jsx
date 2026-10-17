@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaPhoneAlt, FaWhatsapp, FaCheckCircle } from 'react-icons/fa';
 
-const ServiceCTA = ({ serviceTitle = 'this service' }) => {
+const ServiceCTA = ({ serviceTitle }) => {
   return (
-    <section className="relative py-16 md:py-20 overflow-hidden">
+    <section className="relative bg-transparent py-16 md:py-20 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#38BDF8]/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -22,12 +22,15 @@ const ServiceCTA = ({ serviceTitle = 'this service' }) => {
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+              {/* Heading text updated here */}
+              <h2 className="mb-5 text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl lg:text-[2.75rem]">
                 Ready to start your{' '}
-                <span className="text-[#38BDF8]">{serviceTitle}</span> project?
+                <span className="text-[#38BDF8]">
+                  {serviceTitle || 'next project'}
+                </span>
               </h2>
 
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+              <p className="mb-8 max-w-xl text-sm leading-relaxed text-gray-300 sm:text-base">
                 Let's discuss your goals and get a free consultation from our team. No
                 commitment, just clear guidance on how to bring your ideas to life.
               </p>

@@ -5,10 +5,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import ContactUs from "./pages/ContactUs";
-import Services from "./pages/Services/Services";
+import Services from "./pages/Services";
 import Footer from "./components/Footer";
-import ServiceDetails from "./pages/Services/ServiceDetails";
+import ServiceDetails from "./components/services/ServiceDetails";
 import CustomCursor from "./components/CustomCursor";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>
 

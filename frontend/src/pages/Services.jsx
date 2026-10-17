@@ -10,10 +10,10 @@ import {
   FaPalette,
   FaArrowRight,
 } from 'react-icons/fa';
-import servicesData from '../../data/services.json';
-import PageHeader from '../../components/PageHeader';
-import SEO from '../../components/SEO';
-import FooterCTA from '../../components/FooterCTA';
+import servicesData from '../data/services.json';
+import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
+import FooterCTA from '../components/FooterCTA';
 
 const iconMap = {
   FaBullhorn,

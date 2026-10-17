@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "category": "E-Commerce",
+    "description": "A full-featured online store with payment integration, inventory management, and real-time analytics.",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+    "tags": ["React", "Node.js", "Stripe", "MongoDB"],
+    "liveUrl": "#",
+    "codeUrl": "#",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Healthcare Dashboard",
+    "category": "Web Apps",
+    "description": "Patient management system with appointment scheduling, real-time chat, and reporting dashboard.",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    "tags": ["React", "Laravel", "MySQL", "Chart.js"],
+    "liveUrl": "#",
+    "codeUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "Fashion Store App",
+    "category": "UI/UX",
+    "description": "Modern fashion e-commerce app design with focus on user experience and seamless checkout.",
+    "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
+    "tags": ["Figma", "React", "Tailwind"],
+    "liveUrl": "#",
+    "codeUrl": "#"
+  }
+]
