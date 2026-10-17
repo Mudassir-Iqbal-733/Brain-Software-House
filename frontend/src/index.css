@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+:root {
+  --navbar-height: 220px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}

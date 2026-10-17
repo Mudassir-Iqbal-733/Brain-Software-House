@@ -1,0 +1,185 @@
+import { Link } from 'react-router-dom';
+import {
+  FaArrowRight,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaEye,
+} from 'react-icons/fa';
+
+const ProjectsSection = () => {
+  const projects = [
+    {
+      id: 1,
+      title: 'E-Commerce Platform',
+      category: 'E-Commerce',
+      description:
+        'A full-featured online store with payment integration, inventory management, and real-time analytics.',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+      tags: ['React', 'Node.js', 'Stripe', 'MongoDB'],
+      liveUrl: '#',
+      codeUrl: '#',
+      featured: true,
+    },
+    {
+      id: 2,
+      title: 'Healthcare Dashboard',
+      category: 'Web Apps',
+      description:
+        'Patient management system with appointment scheduling, real-time chat, and reporting dashboard.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      tags: ['React', 'Laravel', 'MySQL', 'Chart.js'],
+      liveUrl: '#',
+      codeUrl: '#',
+    },
+    {
+      id: 3,
+      title: 'Fashion Store App',
+      category: 'UI/UX',
+      description:
+        'Modern fashion e-commerce app design with focus on user experience and seamless checkout.',
+      image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80',
+      tags: ['Figma', 'React', 'Tailwind'],
+      liveUrl: '#',
+      codeUrl: '#',
+    },
+    
+  ];
+
+  return (
+    <section className="relative bg-gray-100 py-20 md:py-28 overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#38BDF8]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563EB]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="w-12 h-px bg-[#38BDF8]"></span>
+              <span className="text-[#2563EB] text-xs font-bold tracking-widest uppercase">
+                Our Portfolio
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F1E4A] leading-tight">
+              Projects That{' '}
+              <span className="relative inline-block">
+                <span className="text-[#38BDF8]">Speak for Themselves</span>
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#38BDF8]/40 rounded-full"></span>
+              </span>
+            </h2>
+          </div>
+
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md md:text-right">
+            Explore our recent work — from full-scale web platforms to
+            pixel-perfect designs built for real businesses.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#38BDF8]/10 flex flex-col"
+            >
+              <div className="relative h-56 overflow-hidden shrink-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-[#0F1E4A] via-[#0F1E4A]/40 to-transparent"></div>
+
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30">
+                    {project.category}
+                  </span>
+                </div>
+
+                {project.featured && (
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full bg-linear-to-r from-[#38BDF8] to-[#2563EB] text-white shadow-lg">
+                      ⭐ Featured
+                    </span>
+                  </div>
+                )}
+
+                <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="View live"
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-[#38BDF8] text-[#0F1E4A] hover:bg-white transition-colors duration-300 shadow-lg"
+                  >
+                    <FaExternalLinkAlt className="text-xs" />
+                  </a>
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="View code"
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-[#38BDF8] hover:text-[#0F1E4A] hover:border-[#38BDF8] transition-all duration-300"
+                  >
+                    <FaGithub className="text-xs" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative p-6 flex flex-col flex-1">
+                <h3 className="text-lg font-bold text-[#0F1E4A] leading-tight mb-2 group-hover:text-[#2563EB] transition-colors duration-300">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-gray-600 leading-relaxed mb-5 flex-1">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="inline-block text-[10px] font-bold tracking-wider uppercase text-[#2563EB] bg-[#38BDF8]/10 px-2.5 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#0F1E4A] hover:text-[#2563EB] transition-colors duration-300 group/link"
+                  >
+                    <FaEye className="text-xs" />
+                    View Project
+                    <FaArrowRight className="text-xs transition-transform duration-300 group-hover/link:translate-x-1" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-14 md:mt-16 flex justify-center">
+          <Link
+            to="/projects"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#38BDF8] text-[#0F1E4A] px-7 sm:px-9 py-3.5 sm:py-4 font-bold text-sm sm:text-base transition-all duration-300 shadow-xl shadow-[#38BDF8]/30 hover:bg-[#0F1E4A] hover:text-white hover:scale-105"
+          >
+            <span>View All Projects</span>
+            <span className="w-7 h-7 rounded-full bg-[#0F1E4A] text-[#38BDF8] flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1 group-hover:bg-white group-hover:text-[#0F1E4A]">
+              <FaArrowRight className="text-xs" />
+            </span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;

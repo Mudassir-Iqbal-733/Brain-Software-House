@@ -1,0 +1,181 @@
+[
+  {
+    "id": 1,
+    "slug": "social-media-marketing",
+    "title": "Social Media & Digital Marketing",
+    "shortDesc": "Strategic social media and digital marketing across Facebook, Instagram, TikTok, LinkedIn, and X.",
+    "description": "We build brand awareness, drive engagement, run paid ad campaigns, and turn followers into loyal customers with data-driven execution. Our team handles everything from strategy and content creation to ad management and performance reporting.",
+    "icon": "FaBullhorn",
+    "tags": ["Facebook", "Instagram", "TikTok", "Google Ads", "SEO"],
+    "features": [
+      "Social media strategy & content calendar",
+      "Paid ad campaigns (Meta, Google, TikTok)",
+      "Audience research & targeting",
+      "Community management & engagement",
+      "Monthly performance reports",
+      "Conversion tracking & optimization"
+    ],
+    "deliverables": [
+      "Custom content plan",
+      "Ad creatives & copywriting",
+      "Performance analytics dashboard",
+      "Monthly strategy review"
+    ],
+    "process": [
+      "Discovery & goal setting",
+      "Audience research",
+      "Strategy & content plan",
+      "Campaign setup & launch",
+      "Optimization & reporting"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "wordpress-development",
+    "title": "WordPress Development & Design",
+    "shortDesc": "Custom WordPress websites engineered for speed, security, and scalability.",
+    "description": "From business sites to content platforms, we deliver responsive, SEO-optimized builds with effortless management. Whether you need a simple blog or a complex WooCommerce store, our WordPress solutions are built to perform.",
+    "icon": "FaWordpress",
+    "tags": ["WordPress", "WooCommerce", "Elementor"],
+    "features": [
+      "Custom WordPress theme development",
+      "WooCommerce store setup",
+      "Elementor & page builder customization",
+      "Speed optimization & caching",
+      "Security hardening",
+      "SEO-friendly structure"
+    ],
+    "deliverables": [
+      "Fully responsive website",
+      "Admin training",
+      "30-day post-launch support",
+      "SEO setup"
+    ],
+    "process": [
+      "Requirement gathering",
+      "Design mockup",
+      "Development & customization",
+      "Testing & QA",
+      "Launch & handover"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "custom-web-development",
+    "title": "Custom Web Development",
+    "shortDesc": "Modern, high-performance websites built with React, Next.js, and Node.js.",
+    "description": "We architect pixel-perfect, scalable applications tailored precisely to your business requirements. Whether it's a SaaS dashboard, an internal tool, or a high-traffic website, we build solutions that scale with your business.",
+    "icon": "FaCode",
+    "tags": ["React", "Laravel", "Tailwind"],
+    "features": [
+      "Full-stack web application development",
+      "Custom API design & integration",
+      "Scalable architecture",
+      "Responsive UI/UX design",
+      "Performance optimization",
+      "Security best practices"
+    ],
+    "deliverables": [
+      "Production-ready web application",
+      "Source code & documentation",
+      "Deployment setup",
+      "60-day support"
+    ],
+    "process": [
+      "Requirement analysis",
+      "Architecture planning",
+      "UI/UX design",
+      "Development sprints",
+      "Testing & deployment"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "ecommerce-store-development",
+    "title": "E-Commerce Store Development",
+    "shortDesc": "Launch and scale your online store with expert Amazon, Shopify, and WooCommerce solutions.",
+    "description": "From store setup to product listings, payment integration, and conversion optimization — we handle the technical side so you can focus on selling. We build stores that convert visitors into customers.",
+    "icon": "FaShoppingCart",
+    "tags": ["Amazon", "Shopify", "WooCommerce", "Stripe"],
+    "features": [
+      "Store setup & configuration",
+      "Product listing & optimization",
+      "Payment gateway integration",
+      "Shipping & tax setup",
+      "Cart abandonment recovery",
+      "Analytics & conversion tracking"
+    ],
+    "deliverables": [
+      "Fully functional online store",
+      "Product upload & categorization",
+      "Payment & shipping setup",
+      "Training session"
+    ],
+    "process": [
+      "Platform selection",
+      "Store design",
+      "Product setup",
+      "Payment & shipping integration",
+      "Launch & training"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "custom-software-development",
+    "title": "Custom Software Development",
+    "shortDesc": "End-to-end custom software designed around your workflows.",
+    "description": "From CRM systems to SaaS platforms, we build secure, scalable software that grows alongside your business. Our team handles everything from concept to deployment, ensuring your software solves real business problems.",
+    "icon": "FaLaptopCode",
+    "tags": ["SaaS", "CRM", "API", "Cloud"],
+    "features": [
+      "Custom CRM & ERP systems",
+      "SaaS platform development",
+      "API development & integration",
+      "Cloud architecture & deployment",
+      "Scalable database design",
+      "Ongoing maintenance & support"
+    ],
+    "deliverables": [
+      "Fully functional software",
+      "API documentation",
+      "Cloud deployment",
+      "90-day support"
+    ],
+    "process": [
+      "Requirement gathering",
+      "System architecture",
+      "Development sprints",
+      "Testing & QA",
+      "Deployment & support"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "graphic-design-motion-graphics",
+    "title": "Graphic Design & Motion Graphics",
+    "shortDesc": "Creative design solutions spanning social posts, flyers, brochures, brand identities, and animated videos.",
+    "description": "We turn ideas into visuals that captivate and convert. From brand identity systems to animated explainer videos, our design team creates visuals that leave a lasting impression.",
+    "icon": "FaPalette",
+    "tags": ["Branding", "Motion", "Print", "UI/UX"],
+    "features": [
+      "Brand identity design",
+      "Social media creatives",
+      "Print design (flyers, brochures)",
+      "Motion graphics & video editing",
+      "UI/UX design",
+      "Packaging design"
+    ],
+    "deliverables": [
+      "Brand guidelines document",
+      "All design source files",
+      "Social media templates",
+      "Video exports in multiple formats"
+    ],
+    "process": [
+      "Discovery & briefing",
+      "Concept development",
+      "Design revisions",
+      "Final delivery"
+    ]
+  }
+]

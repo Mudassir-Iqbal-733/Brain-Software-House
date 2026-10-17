@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ceoImage from '../assets/ceo.jpg.jpeg';
 
-const CeoMessage = () => {
+const CEOMessage = () => {
   useEffect(() => {
     AOS.refresh();
   }, []);
@@ -82,4 +82,4 @@ const CeoMessage = () => {
   );
 };
 
-export default CeoMessage;
+export default CEOMessage;

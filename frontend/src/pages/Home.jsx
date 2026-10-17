@@ -1,21 +1,24 @@
-import React from 'react'
-
 import HeroSection from '../components/HeroSection'
 import WhyChooseBSH from '../components/WhyChooseBSH'
-import Services from './Services'
 import HappyClients from '../components/HappyClients'
+import FooterCTA from '../components/FooterCTA'
+import TeamCarousel from '../components/TeamCarousel'
+import ProjectsSection from '../components/ProjectsSection'
+import ServicesSection from '../components/ServicesSection'
 import CEOMessage from '../components/CEOMessage'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <div>
         <HeroSection />
         <WhyChooseBSH />
-        <Services />
+        <ServicesSection />
         <CEOMessage />
+        <ProjectsSection />
+         <TeamCarousel />
         <HappyClients />
-        <Footer />
+        <FooterCTA />
+        
     </div>
   )
 }
