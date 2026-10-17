@@ -112,13 +112,13 @@ const TeamCarousel = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="w-[280px] sm:w-[300px] md:w-[320px] px-2 sm:px-3 py-3 sm:py-4"
+                className="w-[300px] sm:w-[320px] md:w-[340px] px-2 sm:px-3 py-3 sm:py-4"
               >
                 <div className="group relative h-full">
                   <div className="absolute -inset-0.5 bg-linear-to-br from-[#38BDF8] to-[#2563EB] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
 
                   <div className="relative bg-linear-to-b from-[#1E3A8A] to-[#152A5E] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col">
-                    <div className="relative h-64 sm:h-72 overflow-hidden shrink-0">
+                    <div className="relative h-52 sm:h-64 md:h-72 overflow-hidden shrink-0">
                       {member.image ? (
                         <img
                           src={member.image}
@@ -132,9 +132,9 @@ const TeamCarousel = () => {
                         </div>
                       )}
 
-                      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-[#1E3A8A] via-[#1E3A8A]/80 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 bg-linear-to-t from-[#1E3A8A] via-[#1E3A8A]/80 to-transparent"></div>
 
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                         <span className="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase px-2.5 sm:px-3 py-1.5 rounded-full bg-[#0F1E4A]/70 backdrop-blur-md text-[#38BDF8] border border-[#38BDF8]/40">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
                           {member.department}
@@ -153,7 +153,7 @@ const TeamCarousel = () => {
                         {member.role}
                       </p>
 
-                      <div className="mt-auto pt-3 sm:pt-4 border-t border-white/10">
+                      <div className="mt-auto pt-3 border-t border-white/10">
                         <a
                           href={`https://wa.me/${member.whatsapp}`}
                           target="_blank"
