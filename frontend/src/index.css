@@ -24,3 +24,64 @@ body {
 .team-carousel .slick-slide > div {
   height: 100%;
 }
+
+/* =========================================
+   1. CUSTOM WINDOW SCROLLBAR (BLUE)
+   ========================================= */
+::-webkit-scrollbar {
+  width: 10px;               /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;       /* Light gray track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38BDF8;       /* Blue thumb */
+  border-radius: 10px;       /* Rounded ends */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F1E4A;       /* Dark navy on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #38BDF8 #f1f5f9;
+}
+
+/* =========================================
+   2. CUSTOM BLUE DOT CURSOR
+   ========================================= */
+/* Hide default cursor everywhere (except inputs for usability) */
+* {
+  cursor: none !important;
+}
+
+input, textarea, select {
+  cursor: text !important;
+}
+
+/* The custom dot cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #38BDF8; /* Blue color matching your theme */
+  pointer-events: none;      /* Prevents cursor from blocking clicks */
+  z-index: 99999;            /* Stays on top of everything */
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
+}
+
+/* Optional: Make it bigger when clicking or hovering over links */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(56, 189, 248, 0.5); /* Translucent blue */
+}

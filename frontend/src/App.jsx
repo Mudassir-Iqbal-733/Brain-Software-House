@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import Services from "./pages/Services/Services";
 import Footer from "./components/Footer";
 import ServiceDetails from "./pages/Services/ServiceDetails";
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <CustomCursor />
       <Navbar />
 
       <main className="flex-1">
