@@ -63,13 +63,13 @@ const TeamCarousel = () => {
         }}
       ></div>
 
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#38BDF8]/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#2563EB]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#38BDF8]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#2563EB]/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-5">
+          <div className="max-w-2xl text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-5">
               <span className="w-12 h-px bg-[#38BDF8]"></span>
               <span className="text-[#38BDF8] text-xs font-bold tracking-widest uppercase">
                 Our Team
@@ -88,18 +88,18 @@ const TeamCarousel = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-center md:justify-end gap-3 shrink-0">
             <button
               onClick={() => carouselRef.current?.prev()}
               aria-label="Previous"
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/15 text-white hover:bg-[#38BDF8] hover:text-[#0F1E4A] hover:border-[#38BDF8] transition-all duration-300 backdrop-blur-sm"
+              className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/15 text-white hover:bg-[#38BDF8] hover:text-[#0F1E4A] hover:border-[#38BDF8] transition-all duration-300 backdrop-blur-sm"
             >
               <FaChevronLeft className="text-sm" />
             </button>
             <button
               onClick={() => carouselRef.current?.next()}
               aria-label="Next"
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/15 text-white hover:bg-[#38BDF8] hover:text-[#0F1E4A] hover:border-[#38BDF8] transition-all duration-300 backdrop-blur-sm"
+              className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/15 text-white hover:bg-[#38BDF8] hover:text-[#0F1E4A] hover:border-[#38BDF8] transition-all duration-300 backdrop-blur-sm"
             >
               <FaChevronRight className="text-sm" />
             </button>
@@ -126,7 +126,7 @@ const TeamCarousel = () => {
                   <div className="absolute -inset-0.5 bg-linear-to-br from-[#38BDF8] to-[#2563EB] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
 
                   <div className="relative bg-linear-to-b from-[#1E3A8A] to-[#152A5E] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col">
-                    <div className="relative h-72 overflow-hidden shrink-0">
+                    <div className="relative h-64 sm:h-72 overflow-hidden shrink-0">
                       {member.image ? (
                         <img
                           src={member.image}
@@ -143,7 +143,7 @@ const TeamCarousel = () => {
                       <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-[#1E3A8A] via-[#1E3A8A]/80 to-transparent"></div>
 
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full bg-[#0F1E4A]/70 backdrop-blur-md text-[#38BDF8] border border-[#38BDF8]/40">
+                        <span className="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase px-2.5 sm:px-3 py-1.5 rounded-full bg-[#0F1E4A]/70 backdrop-blur-md text-[#38BDF8] border border-[#38BDF8]/40">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
                           {member.department}
                         </span>
@@ -154,27 +154,27 @@ const TeamCarousel = () => {
                       </div>
                     </div>
 
-                    <div className="relative p-5 pt-2 flex flex-col flex-1">
-                      <div className="w-10 h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] rounded-full mb-4"></div>
+                    <div className="relative p-4 sm:p-5 pt-2 flex flex-col flex-1">
+                      <div className="w-10 h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] rounded-full mb-3 sm:mb-4"></div>
 
-                      <h3 className="text-base font-bold text-white leading-tight mb-1.5">
+                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight mb-1.5">
                         {member.name}
                       </h3>
 
-                      <p className="text-xs text-[#38BDF8] font-semibold tracking-wide mb-5">
+                      <p className="text-[11px] sm:text-xs text-[#38BDF8] font-semibold tracking-wide mb-4 sm:mb-5">
                         {member.role}
                       </p>
 
-                      <div className="mt-auto pt-4 border-t border-white/10">
+                      <div className="mt-auto pt-3 sm:pt-4 border-t border-white/10">
                         <a
                           href={`https://wa.me/${member.whatsapp}`}
                           target="_blank"
                           rel="noreferrer"
                           aria-label={`WhatsApp ${member.name}`}
-                          className="inline-flex items-center gap-2 text-xs font-semibold text-gray-200 hover:text-[#25D366] transition-colors duration-300 group/whatsapp"
+                          className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-gray-200 hover:text-[#25D366] transition-colors duration-300 group/whatsapp"
                         >
-                          <span className="w-7 h-7 rounded-full bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0 group-hover/whatsapp:bg-[#25D366] group-hover/whatsapp:text-white transition-all duration-300">
-                            <FaWhatsapp className="text-xs" />
+                          <span className="w-6 sm:w-7 h-6 sm:h-7 rounded-full bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0 group-hover/whatsapp:bg-[#25D366] group-hover/whatsapp:text-white transition-all duration-300">
+                            <FaWhatsapp className="text-[10px] sm:text-xs" />
                           </span>
                           {member.displayNumber}
                         </a>
