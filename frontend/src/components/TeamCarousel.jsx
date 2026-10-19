@@ -2,6 +2,10 @@ import { useRef } from 'react';
 import { Carousel } from 'antd';
 import ceo from '../assets/ceo.jpeg';
 import managingDirector from '../assets/managing-director.jpeg';
+import Samia from '../assets/Samia Rasheed.jpeg';
+import Nimra from '../assets/Nimra Rasheed.jpeg';
+import Saima from '../assets/Saima Akram.jpeg';
+
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -30,6 +34,33 @@ const TeamCarousel = () => {
       whatsapp: '923277925497',
       displayNumber: '+92 327 7925497',
       image: managingDirector,
+    },
+    {
+      id: 4,
+      name: 'Samia Rasheed',
+      role: 'Graphic Designer & Video Editor',
+      department: 'Creative',
+      whatsapp: '923245632697',
+      displayNumber: '+92 324 5632697',
+      image: Samia,
+    },
+    {
+      id: 5,
+      name: 'Nimra Rasheed',
+      role: 'Social Media Marketer & Graphic Designer',
+      department: 'Creative',
+      whatsapp: '923245632688',
+      displayNumber: '+92 324 5632688',
+      image: Nimra,
+    },
+    {
+      id: 6,
+      name: 'Saima Akram',
+      role: 'SEO Specialist & Wordpress Developer',
+      department: 'Creative',
+      whatsapp: '923245632684',
+      displayNumber: '+92 324 5632684',
+      image: Saima,
     },
   ];
 
@@ -64,7 +95,6 @@ const TeamCarousel = () => {
               </span>
             </div>
             
-            {/* Yahan Heading Update Ki Hai */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
               The Visionaries &{' '}
               <span className="relative inline-block">
@@ -73,7 +103,6 @@ const TeamCarousel = () => {
               </span>
             </h2>
             
-            {/* Yahan Subtitle Update Kiya Hai */}
             <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto md:mx-0">
               Meet the leadership and strategic minds steering our company towards excellence and innovation.
             </p>
@@ -107,21 +136,20 @@ const TeamCarousel = () => {
             slidesToShow={4}
             slidesToScroll={1}
             responsive={responsive}
-            variableWidth={true}
             draggable={true}
             swipeToSlide={true}
             className="-mx-2 sm:-mx-3"
+            /* variableWidth={true} ko hata diya hai taake width barabar rahe */
           >
             {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="w-300px sm:w-[320px] m340px px-2 sm:px-3 py-3 sm:py-4"
-              >
-                <div className="group relative h-full">
+              <div key={member.id} className="px-2 sm:px-3 py-3 sm:py-4 h-full">
+                {/* Card Wrapper: w-full aur h-full diya hai */}
+                <div className="group relative h-full w-full flex flex-col">
                   <div className="absolute -inset-0.5 bg-linear-to-br from-[#38BDF8] to-[#2563EB] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
 
-                  <div className="relative bg-linear-to-b from-[#1E3A8A] to-[#152A5E] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col">
-                    <div className="relative h-52 sm:h-64 md:h-72 overflow-hidden shrink-0">
+                  <div className="relative bg-linear-to-b from-[#1E3A8A] to-[#152A5E] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-2 flex flex-col flex-1 w-full">
+                    {/* Image Container: Fixed height taake sab barabar hon */}
+                    <div className="relative h-52 sm:h-64 md:h-72 w-full overflow-hidden shrink-0">
                       {member.image ? (
                         <img
                           src={member.image}
@@ -145,18 +173,21 @@ const TeamCarousel = () => {
                       </div>
                     </div>
 
-                    <div className="relative p-4 sm:p-5 pt-2 flex flex-col flex-1">
-                      <div className="w-10 h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] rounded-full mb-3"></div>
+                    {/* Content Container: flex-1 lagaya hai taake content barabar ho */}
+                    <div className="relative p-4 sm:p-5 pt-2 flex flex-col flex-1 w-full">
+                      <div className="w-10 h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] rounded-full mb-3 shrink-0"></div>
 
-                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight mb-1.5">
+                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight mb-1.5 shrink-0">
                         {member.name}
                       </h3>
 
-                      <p className="text-[11px] sm:text-xs text-[#38BDF8] font-semibold tracking-wide mb-4">
+                      {/* line-clamp-2 se role 2 line mein fix rahega */}
+                      <p className="text-[11px] sm:text-xs text-[#38BDF8] font-semibold tracking-wide mb-4 line-clamp-2 shrink-0">
                         {member.role}
                       </p>
 
-                      <div className="mt-auto pt-3 border-t border-white/10">
+                      {/* mt-auto se WhatsApp number hamesha bottom par rahega */}
+                      <div className="mt-auto pt-3 border-t border-white/10 w-full">
                         <a
                           href={`https://wa.me/${member.whatsapp}`}
                           target="_blank"
