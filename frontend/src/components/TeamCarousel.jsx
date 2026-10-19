@@ -63,16 +63,19 @@ const TeamCarousel = () => {
                 Our Team
               </span>
             </div>
+            
+            {/* Yahan Heading Update Ki Hai */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
-              Built by Experts,{' '}
+              The Visionaries &{' '}
               <span className="relative inline-block">
-                <span className="text-[#38BDF8]">Driven by Passion</span>
+                <span className="text-[#38BDF8]">Authority</span>
                 <span className="absolute -bottom-1.5 left-0 w-full h-0.5 sm:h-1 bg-[#38BDF8]/40 rounded-full"></span>
               </span>
             </h2>
+            
+            {/* Yahan Subtitle Update Kiya Hai */}
             <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto md:mx-0">
-              Meet the talented team of engineers, creatives, and strategists behind
-              every successful project we deliver.
+              Meet the leadership and strategic minds steering our company towards excellence and innovation.
             </p>
           </div>
 
