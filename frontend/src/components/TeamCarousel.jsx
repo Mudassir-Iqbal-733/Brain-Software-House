@@ -5,6 +5,8 @@ import managingDirector from '../assets/managing-director.jpeg';
 import Samia from '../assets/Samia Rasheed.jpeg';
 import Nimra from '../assets/Nimra Rasheed.jpeg';
 import Saima from '../assets/Saima Akram.jpeg';
+import Tehreem from '../assets/Tehreem Khan.jpeg';
+
 
 import {
   FaChevronLeft,
@@ -34,6 +36,15 @@ const TeamCarousel = () => {
       whatsapp: '923277925497',
       displayNumber: '+92 327 7925497',
       image: managingDirector,
+    },
+    {
+      id: 3,
+      name: 'Tehreem Khan',
+      role: 'Manager',
+      department: 'Manager',
+      whatsapp: '923245632696',
+      displayNumber: '+92 324 5632696',
+      image: Tehreem,
     },
     {
       id: 4,
