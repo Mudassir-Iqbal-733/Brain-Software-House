@@ -7,7 +7,6 @@ import Nimra from '../assets/Nimra Rasheed.jpeg';
 import Saima from '../assets/Saima Akram.jpeg';
 import Tehreem from '../assets/Tehreem Khan.jpeg';
 
-
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -83,7 +82,7 @@ const TeamCarousel = () => {
   ];
 
   return (
-    <section className="relative bg-[#152A5E] py-16 sm:py-20 md:py-28 overflow-x-hidden">
+    <section className="relative bg-[#152A5E] py-16 sm:py-20 md:py-28 overflow-hidden">
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -149,18 +148,22 @@ const TeamCarousel = () => {
             responsive={responsive}
             draggable={true}
             swipeToSlide={true}
+            variableWidth={true} /* Ye wapas on kiya taake mobile pe squeeze na ho */
             className="-mx-2 sm:-mx-3"
-            /* variableWidth={true} ko hata diya hai taake width barabar rahe */
           >
             {teamMembers.map((member) => (
-              <div key={member.id} className="px-2 sm:px-3 py-3 sm:py-4 h-full">
-                {/* Card Wrapper: w-full aur h-full diya hai */}
+              <div 
+                key={member.id} 
+                /* Mobile pe 280px, tablet pe 300px, desktop pe 320px fixed width di hai */
+                className="w-[280px] sm:w-[300px] lg:w-[320px] px-2 sm:px-3 py-3 sm:py-4 shrink-0"
+              >
                 <div className="group relative h-full w-full flex flex-col">
                   <div className="absolute -inset-0.5 bg-linear-to-br from-[#38BDF8] to-[#2563EB] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
 
                   <div className="relative bg-linear-to-b from-[#1E3A8A] to-[#152A5E] rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-2 flex flex-col flex-1 w-full">
-                    {/* Image Container: Fixed height taake sab barabar hon */}
-                    <div className="relative h-52 sm:h-64 md:h-72 w-full overflow-hidden shrink-0">
+                    
+                    {/* Image Container */}
+                    <div className="relative h-56 sm:h-64 md:h-72 w-full overflow-hidden shrink-0">
                       {member.image ? (
                         <img
                           src={member.image}
@@ -177,33 +180,32 @@ const TeamCarousel = () => {
                       <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 bg-linear-to-t from-[#1E3A8A] via-[#1E3A8A]/80 to-transparent"></div>
 
                       <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
-                        <span className="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase px-2.5 sm:px-3 py-1.5 rounded-full bg-[#0F1E4A]/70 backdrop-blur-md text-[#38BDF8] border border-[#38BDF8]/40">
+                        <span className="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase px-2.5 sm:px-3 py-1.5 rounded-full bg-[#0F1E4A]/70 backdrop-blur-md text-[#38BDF8] border border-[#38BDF8]/40 whitespace-nowrap">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
                           {member.department}
                         </span>
                       </div>
                     </div>
 
-                    {/* Content Container: flex-1 lagaya hai taake content barabar ho */}
+                    {/* Content Container */}
                     <div className="relative p-4 sm:p-5 pt-2 flex flex-col flex-1 w-full">
                       <div className="w-10 h-1 bg-linear-to-r from-[#38BDF8] to-[#2563EB] rounded-full mb-3 shrink-0"></div>
 
-                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight mb-1.5 shrink-0">
+                      <h3 className="text-sm sm:text-base font-bold text-white leading-tight mb-1.5 shrink-0 line-clamp-2">
                         {member.name}
                       </h3>
 
-                      {/* line-clamp-2 se role 2 line mein fix rahega */}
                       <p className="text-[11px] sm:text-xs text-[#38BDF8] font-semibold tracking-wide mb-4 line-clamp-2 shrink-0">
                         {member.role}
                       </p>
 
-                      {/* mt-auto se WhatsApp number hamesha bottom par rahega */}
+                      {/* mt-auto pushes this to the bottom */}
                       <div className="mt-auto pt-3 border-t border-white/10 w-full">
                         <a
                           href={`https://wa.me/${member.whatsapp}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-gray-200 hover:text-[#25D366] transition-colors duration-300 group/whatsapp"
+                          className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-gray-200 hover:text-[#25D366] transition-colors duration-300 group/whatsapp whitespace-nowrap"
                         >
                           <span className="w-6 sm:w-7 h-6 sm:h-7 rounded-full bg-[#25D366]/15 flex items-center justify-center text-[#25D366] shrink-0 group-hover/whatsapp:bg-[#25D366] group-hover/whatsapp:text-white transition-all duration-300">
                             <FaWhatsapp className="text-[10px] sm:text-xs" />
