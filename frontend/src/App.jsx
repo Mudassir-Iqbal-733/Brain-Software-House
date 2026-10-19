@@ -11,6 +11,7 @@ import ServiceDetails from "./components/services/ServiceDetails";
 import CustomCursor from "./components/CustomCursor";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Blogs from "./pages/Blogs";
 
 const App = () => {
   useEffect(() => {
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/services/:slug" element={<ServiceDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blogs />} />
         </Routes>
       </main>
 

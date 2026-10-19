@@ -18,8 +18,8 @@ const TeamCarousel = () => {
       name: 'Engr. Hafiz M. Shafiq Naimat',
       role: 'CEO & Founder',
       department: 'Leadership',
-      whatsapp: '923004506850',
-      displayNumber: '+92 300 4506850',
+      whatsapp: '923048559923',
+      displayNumber: '+92 304 8559923',
       image: ceo,
     },
     {
@@ -27,8 +27,8 @@ const TeamCarousel = () => {
       name: 'Engr. M. Ateeq Naimat',
       role: 'Managing Director',
       department: 'Leadership',
-      whatsapp: '923011234567',
-      displayNumber: '+92 301 1234567',
+      whatsapp: '923277925497',
+      displayNumber: '+92 327 7925497',
       image: managingDirector,
     },
   ];
@@ -112,7 +112,7 @@ const TeamCarousel = () => {
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="w-[300px] sm:w-[320px] md:w-[340px] px-2 sm:px-3 py-3 sm:py-4"
+                className="w-300px sm:w-[320px] m340px px-2 sm:px-3 py-3 sm:py-4"
               >
                 <div className="group relative h-full">
                   <div className="absolute -inset-0.5 bg-linear-to-br from-[#38BDF8] to-[#2563EB] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur"></div>
@@ -124,7 +124,7 @@ const TeamCarousel = () => {
                           src={member.image}
                           alt={member.name}
                           loading="lazy"
-                          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 grayscale-[40%] group-hover:grayscale-0"
+                          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 grayscale-40% group-hover:grayscale-0"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-[#38BDF8]/20 to-[#2563EB]/20 text-[#2563EB] text-6xl">
